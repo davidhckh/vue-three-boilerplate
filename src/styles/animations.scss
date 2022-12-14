@@ -1,0 +1,83 @@
+$ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+
+@keyframes backInUp {
+  0% {
+    transform: translate3d(0, 8rem, 0) scaleX(0);
+    visibility: visible;
+  }
+
+  70% {
+    transform: translate3d(0, -0.5rem, 0) scaleX(1);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes backInLeft {
+  0% {
+    transform: translate3d(-8rem, 0, 0) scaleY(0.5);
+    visibility: visible;
+  }
+
+  70% {
+    transform: translate3d(0.5rem, 0, 0) scaleY(1);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes backInDown {
+  0% {
+    transform: translate3d(0, -3rem, 0) scaleX(0);
+    visibility: visible;
+    opacity: 0;
+  }
+
+  70% {
+    transform: translate3d(0, 0.5rem, 0) scaleX(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideOutDown {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    pointer-events: none;
+  }
+
+  100% {
+    transform: translate3d(0, 8rem, 0);
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+    visibility: visible;
+  }
+
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+
+  70% {
+    transform: scale(0.95);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

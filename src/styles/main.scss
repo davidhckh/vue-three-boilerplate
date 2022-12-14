@@ -1,0 +1,25 @@
+@import "./src/styles/animations.scss";
+@import "./src/styles/reset.scss";
+@import "./src/styles/fonts.scss";
+
+html,
+body {
+  overflow: hidden;
+  font-family: "TradeGothic";
+  color: $color-black;
+
+  font-size: clamp(10px, 3.2vw, 20px);
+  @include mq("sm") {
+    font-size: clamp(11px, 1vw, 16px);
+  }
+
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+h1 {
+  line-height: 1.4;
+  font-size: 2rem;
+}

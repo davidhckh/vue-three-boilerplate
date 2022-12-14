@@ -1,0 +1,29 @@
+%cover {
+  height: var(--100vh);
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+$breakpoints: (
+  "sm": 768px,
+  "md": 1024px,
+  "lg": 1440px,
+) !default;
+
+$media-direction: min;
+
+@mixin mq($mq, $direction: $media-direction) {
+  @if map-has-key($breakpoints, $mq) {
+    @media (#{$direction}-width: #{map-get($breakpoints, $mq)}) {
+      @content;
+    }
+  } @else if unitless($mq) {
+    $mq: $mq + 0px;
+
+    @media (#{$direction}-width: $mq) {
+      @content;
+    }
+  }
+}
