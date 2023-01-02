@@ -1,31 +1,16 @@
-<script>
-import IconSpritesheet from "./IconSpritesheet.vue";
-import Canvas from "./Components/Canvas.vue";
-
-import { store } from "./content/store.js";
-
-export default {
-  data() {
-    return {
-      store,
-    };
-  },
-  components: {
-    IconSpritesheet,
-    Canvas,
-  },
-};
+<script setup>
+import Experience from "./Experience/Experience.vue";
 </script>
 
 <template>
-  <IconSpritesheet />
+  <div class="uiWrapper"></div>
   <aside>
-    <Canvas></Canvas>
+    <Experience></Experience>
   </aside>
 </template>
 
 <style scoped lang="scss">
-.wrapper {
+.uiWrapper {
   @extend %cover;
 
   left: 0;
@@ -38,10 +23,6 @@ export default {
 
   * {
     pointer-events: all;
-  }
-
-  @include mq("sm") {
-    width: 80vw;
   }
 }
 </style>
