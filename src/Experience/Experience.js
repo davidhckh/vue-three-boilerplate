@@ -7,7 +7,6 @@ import Camera from "./Camera.js";
 import Renderer from "./Renderer.js";
 import World from "./World/World.js";
 import Resources from "./Utils/Resources.js";
-import Materials from "./Materials.js";
 
 let instance = null;
 
@@ -24,7 +23,6 @@ export default class Experience {
     this.time = new Time();
     this.scene = new Scene();
     this.resources = new Resources();
-    this.materials = new Materials();
     this.world = new World();
     this.camera = new Camera();
     this.renderer = new Renderer();
@@ -42,6 +40,5 @@ export default class Experience {
     this.camera.update();
     this.world.update();
     this.renderer.update();
-    this.materials.update();
   }
 }
