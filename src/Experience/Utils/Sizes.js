@@ -1,5 +1,6 @@
 import EventEmitter from "./EventEmitter.js";
 
+
 export default class Sizes extends EventEmitter {
   constructor() {
     super();

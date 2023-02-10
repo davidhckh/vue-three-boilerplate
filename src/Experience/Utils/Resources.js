@@ -1,7 +1,7 @@
 import { TextureLoader } from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import EventEmitter from "./EventEmitter.js";
-import { store } from "@/content/store.js";
+import { store } from "../../stores";
 import sources from "../sources";
 
 export default class Resources extends EventEmitter {
